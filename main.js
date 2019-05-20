@@ -1,83 +1,3 @@
-// array
-// var myMenu =[
-// {
-//     foodImage: "",
-//     h3 :"buffed chicken",
-//     description :"",
-//     cost :350,
-//     add: true
-// },
-// {
-//     foodImage :"image url",
-//     h3 :"buffed chicken",
-//     description :"delicious",
-//     cost: 350,
-//     add: true
-// },
-// {
-//     foodImage :"image url",
-//     h3 :"buffed chicken",
-//     description: "delicious",
-//     cost: 350,
-//     add: true
-// },
-// {
-//     foodImage: "image url",
-//     h3: "buffed chicken",
-//     description: "delicious",
-//     cost: 350,
-//     add: true
-// }
-// ];
-
-
-
-
-// const addFood = myMenu.filter(function(){
-//     if(add = true){
-//         function addAll(...food){
-//             let total = 0;
-//             food.forEach((num) => {
-//                 total += num;;
-//             });
-
-//             return total;
-//         }
-//     }
-// });
-
-
-
-
-// // let placeOrder = document.querySelector('place-order')
-
-
-
-// // placeOrder.addEventListener('submit', addItem);
-
-// // function addItem(e){
-// //     e.preventDefault();
-
-// // };
-
-// // console.log(placeOrder);
-
-
-// // let output = "";
-
-// // for(let i = 0;i < myMenu.lenth; i++){
-// //     output += '<li>'+myMenu[i].cost+'</li>';
-// // }
-
-// // document.querySelector('#people').innerHTML = output;
-
-
-
-// // const person = {
-// //     name
-// // }
-
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -86,6 +6,8 @@ var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+
+let add = document.querySelector('addFood');
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -102,7 +24,52 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+
+
+
+  // looping thought each sected button
+
+
+//   // checkbox
+
+// let checkBox = document.querySelector('#addFood');
+
+// // addEvent lisner
+// if (checkBox.checked == true){
+//   let orderBox = document.querySelector('food');
+// // problem
+//   food.addEventListener('checked', filterOrder)
+// function filterOrder(){
+
+//   let filterValue =
+//                    document.querySelector('food').value.toUpperCase();
+
+//                    let div = document.querySelector('ingridients');
+
+//                    let h3 = document.querySelectorAll('item');
+//         for(let i =0;i < h3.length; i++){
+//           let a = h3[i].getElementsByTagName('a')[0];
+//           if(a.innerHTML.toUpperCase().indexOf(filterValue)== 1
+//           ){
+//             h3[i].style.display = "";
+//           }else{
+//             h3[i].style.display = "none"
+//           }
+//         }
+// }
+
+// } else {
+//   text.style.display = "none";
+// }
+
+
+
 }
+let preOrder = document.querySelector('addFood');
 
-
+preOrder.onclick = function() {
+ if(this.click == true){
+   console.log(btn);
+ }
+}
 

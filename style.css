@@ -130,6 +130,7 @@ h3 ,h2, P{
     padding: 0 20px;
 }
 
+
 #myBtn{
     /* margin: 50px; */
     border-color: brown;
@@ -159,4 +160,40 @@ h3 ,h2, P{
 
 span{
     color: brown;
+}
+
+input[type=checkbox] +  label{
+    display: inline ;
+}
+
+input[type=checkbox]{
+    display: none;
+    margin-right: 2em;
+}
+
+input[type=checkbox] +  label:before{
+    content: "\2714";
+    border: 1px solid brown;
+    width: 1.2em;
+    height: 1.3em;
+    padding: 0.3em auto;
+    color: transparent;
+    margin-right: 0.2em;
+    border-radius: 5%;
+}
+
+input[type=checkbox]:checked +  label:before{
+    background-color: brown;
+    border-color: brown;
+    color: white;
+}
+
+.price{
+    float: left;
+}
+
+.add{
+    float: right;
+    margin-left: 20%;
+    display: flex;
 }
