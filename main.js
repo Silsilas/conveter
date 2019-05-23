@@ -1,3 +1,18 @@
+
+// DOM var
+
+let addMenu = document.querySelector('#add-menu');
+let imageUrl = document.querySelector('#image-url');
+let addBtn = document.querySelector('add-btn');
+let myForm = document.querySelector('#my-form');
+let msg = document.querySelector('.msg');
+let foodMenu = document.querySelector('.food');
+let newFood = document.querySelector('.new');
+
+// let addMen = document.querySelector('.add-menu');
+
+
+
 // Get the modal
 const modal = document.getElementById("myModal");
 
@@ -10,20 +25,23 @@ const span = document.getElementsByClassName("close")[0];
 const add = document.querySelector('addFood');
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+btn.onclick = () => modal.style.display = "block";
+
+
+// btn.onclick = () => myForm.style.display = 'none';
+
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+span.onclick = () =>   modal.style.display = "none";
+
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+window.onclick = (e) => {
+  if (e.target == modal) {
     modal.style.display = "none";
+
   }
+}
 
 
 
@@ -64,12 +82,48 @@ window.onclick = function(event) {
 
 
 
-}
-let preOrder = document.querySelector('addFood');
 
-preOrder.onclick = function() {
- if(this.click == true){
-   console.log(btn);
- }
-}
 
+
+
+// const message = 'Hellow there!';
+
+
+// function firstMessage(){
+//   setTimeout(() => {
+//     let output = '';
+//     output += '<p>$(message)<p>';
+
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+
+// firstMessage();
+
+
+myForm.addEventListener('submit', onsubmit);
+
+
+function onsubmit(e){
+  e.preventDefault();
+
+
+  if(imageUrl.value===''){
+    msg.classList.add('error');
+     msg.innerHTML = 'please fill';
+     setTimeout(() => msg.remove(), 3000);
+  } else{
+    //  addMenu.style.display = 'none';
+
+     let creaateFood = document.createElement('div');
+
+    const newMenu =document.createElement('div');
+
+    newMenu.appendChild(document.createTextNode(''));
+     newFood.appendChild(newMenu);
+
+     imageUrl.value = '';
+
+  }
+}
