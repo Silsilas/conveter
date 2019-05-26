@@ -114,16 +114,18 @@ function onsubmit(e){
      msg.innerHTML = 'please fill';
      setTimeout(() => msg.remove(), 3000);
   } else{
-    //  addMenu.style.display = 'none';
+     addMenu.style.display = 'none';
 
-     let creaateFood = document.createElement('div');
+     let createFood = document.createElement('div');
 
     const newMenu =document.createElement('div');
 
+createFood.style = 'ingridients'
     newMenu.appendChild(document.createTextNode(''));
      newFood.appendChild(newMenu);
 
      imageUrl.value = '';
+
 
   }
 }
